@@ -1,3 +1,62 @@
 @import "tailwindcss";
 
 @tailwind utilities;
+
+@theme {
+  /* ================= FONT ================= */
+  --font-script: "Alex Brush", cursive; /* Judul aksen: "Setia" */
+  --font-heading: "Playfair Display", serif; /* Subjudul / Tagline */
+  --font-body: "Poppins", sans-serif; /* Deskripsi & info */
+
+  /* ================= COLOR ================= */
+  --color-primary-01: #e0a100; /* Gold / Highlight */
+  --color-primary-02: #0f0f0f; /* Black / Background */
+  --color-primary-03: #f5f3ee; /* Warm White / Text */
+}
+
+@layer utilities {
+  /* ================= FONT UTILITIES ================= */
+  .font-script {
+    font-family: var(--font-script);
+  }
+
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  /* ================= COLOR UTILITIES ================= */
+  .text-gold {
+    color: var(--color-primary-01);
+  }
+
+  .bg-gold {
+    background-color: var(--color-primary-01);
+  }
+
+  .bg-dark {
+    background-color: var(--color-primary-02);
+  }
+
+  .text-light {
+    color: var(--color-primary-03);
+  }
+
+  /* ================= BACKGROUND IMAGE ================= */
+  .bg-motif {
+    background-image: url("./assets/motif2.webp");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .bg-motif-cover {
+    background-image: url("./assets/galeri/gambar1.webp");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+}
