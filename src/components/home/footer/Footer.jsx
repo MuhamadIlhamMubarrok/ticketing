@@ -20,13 +20,17 @@ export default function Footer() {
             <img src={logo1} alt="Setia Event" className="h-20 w-auto" />
 
             <h3 className="font-heading text-start text-light text-4xl leading-snug">
-              Menggapai Surga <br />
+              Setia Bersamamu
+            
+              Merawat Cinta
+              <br />
+              Sampai Surga
+              <br />
               Bersama Keluarga
             </h3>
 
             <p className="font-body text-start text-light text-sm opacity-90 max-w-md">
-              Jl. Parikesit Raya No.35, Bantarjati, Kec. Bogor Utara, <br />
-              Kota Bogor, Jawa Barat 16153
+             Sharon Boulevard Timur, Bandung
             </p>
           </div>
 
