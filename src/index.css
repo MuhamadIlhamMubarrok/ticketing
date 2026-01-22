@@ -29,8 +29,14 @@
   }
 
   /* ================= COLOR UTILITIES ================= */
-  .text-gold {
+  .text-primary {
     color: var(--color-primary-01);
+  }
+  .text-secondary {
+    color: var(--color-primary-02);
+  }
+  .text-third {
+    color: var(--color-primary-03);
   }
 
   .bg-gold {
