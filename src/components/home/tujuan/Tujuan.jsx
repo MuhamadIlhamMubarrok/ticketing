@@ -54,16 +54,37 @@ export default function Tujuan() {
           ].map((item, i) => {
             const Icon = item.icon;
             return (
-              <motion.div key={i} variants={cardVariant} transition={{ duration: 0.6, ease: "easeOut" }} whileHover={{ y: -6 }} className="flex-1 bg-utama backdrop-blur-sm px-10 py-12 rounded-3xl text-left">
-                <div className="mb-5 flex items-center gap-4">
-                  <motion.div initial={{ scale: 0.9, rotate: -5 }} whileInView={{ scale: 1, rotate: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} className="p-2 rounded-full bg-primary/15 text-primary">
-                    <Icon size={64} strokeWidth={1.5} />
-                  </motion.div>
+              <motion.div
+                key={i}
+                variants={cardVariant}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                whileHover={{ y: -6 }}
+                className="
+                  relative
+                  flex-1
+                  bg-utama
+                  backdrop-blur-sm
+                  px-10 py-12
+                  rounded-3xl
+                  text-left
+                  overflow-hidden
+                  shadow-xl
+                "
+              >
+                {/* DARK OVERLAY */}
+                <div className="absolute inset-0 bg-black/60 pointer-events-none" />
 
-                  <h3 className="font-body text-xl md:text-2xl font-semibold text-light">{item.title}</h3>
+                <div className="relative z-10">
+                  <div className="mb-5 flex items-center gap-4">
+                    <motion.div initial={{ scale: 0.9, rotate: -5 }} whileInView={{ scale: 1, rotate: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} className="p-2 rounded-full bg-primary/15 text-primary">
+                      <Icon size={64} strokeWidth={1.5} />
+                    </motion.div>
+
+                    <h3 className="font-body text-xl md:text-2xl font-semibold text-light">{item.title}</h3>
+                  </div>
+
+                  <p className="text-third leading-relaxed">{item.desc}</p>
                 </div>
-
-                <p className="text-third leading-relaxed">{item.desc}</p>
               </motion.div>
             );
           })}

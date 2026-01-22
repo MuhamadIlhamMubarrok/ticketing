@@ -45,6 +45,19 @@ export default function About() {
       {/* === CONTENT === */}
       <div className="relative z-10">
         <motion.div variants={item} className="flex flex-col gap-6">
+          <div className="relative aspect-video bg-black">
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/KZuxxUH-Ww8"
+              title="Setia Bersamamu"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+          <p className="mt-4 text-center text-sm text-third/70">
+            Cuplikan suasana & pesan utama Event <span className="text-primary">Setia Bersamamu</span>
+          </p>
           <div>
             <span className="inline-block mb-4 px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-widest uppercase bg-primary/10 border border-primary/30 text-primary">✦ Tentang Event</span>
 
