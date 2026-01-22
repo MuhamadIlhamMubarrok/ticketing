@@ -58,9 +58,21 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+  .bg-dua {
+    background-image: url("../public/general/bg-utama.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
   .bg-primary {
     background-image: url("../public/general/bg-utama.png");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+  .bg-tiga {
+    background-image: url("../public/general/bg-3.png");
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;

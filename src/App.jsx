@@ -8,8 +8,29 @@ import About from "./components/home/about/About";
 import Tujuan from "./components/home/tujuan/tujuan";
 import Gallery from "./components/home/gallery/Gallery";
 import WhatsappFloating from "./components/partials/WhatsappFloating";
+import { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
 
 function App() {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smooth: true,
+      smoothTouch: false,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
   return (
     <Router basename="/ticketing">
       <Routes>
