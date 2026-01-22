@@ -52,15 +52,15 @@
   }
 
   /* ================= BACKGROUND IMAGE ================= */
-  .bg-motif {
-    background-image: url("./assets/motif2.webp");
-    background-size: contain;
+  .bg-utama {
+    background-image: url("../public/general/bg1.png");
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
 
-  .bg-motif-cover {
-    background-image: url("./assets/galeri/gambar1.webp");
+  .bg-primary {
+    background-image: url("../public/general/bg-utama.png");
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
