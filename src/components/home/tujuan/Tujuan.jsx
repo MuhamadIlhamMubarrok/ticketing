@@ -12,7 +12,7 @@ export default function Tujuan() {
     visible: { opacity: 1, y: 0, scale: 1 },
   };
   return (
-    <section className="relative py-20 font-body overflow-hidden">
+    <section id="tujuan" className="relative py-20 font-body overflow-hidden">
       {/* BACKGROUND BLUR */}
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[480px] h-[480px] bg-primary/25 blur-[160px] rounded-full" />
 

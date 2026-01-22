@@ -1,7 +1,7 @@
 export default function WhatsappFloating() {
   return (
     <a
-      href="https://wa.me/6281234567890?text=Assalamu%27alaikum%2C%20saya%20ingin%20bertanya%20tentang%20event%20Setia%20Bersamamu"
+      href="https://wa.me/6285320477752?text=Assalamu%27alaikum%2C%20saya%20ingin%20bertanya%20tentang%20event%20Setia%20Bersamamu"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat WhatsApp"

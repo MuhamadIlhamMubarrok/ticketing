@@ -24,15 +24,15 @@ const item = {
 export default function About() {
   return (
     <motion.section
+      id="explore"
       variants={container}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-100px" }}
       className="relative max-w-7xl mx-auto rounded-[2.5rem] overflow-hidden bg-utama p-6 md:p-10 font-body text-light shadow-2xl"
     >
-      {/* === PRIMARY BLUR BACKGROUND === */}
-      <motion.div animate={{ scale: [1, 1.08, 1] }} transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }} className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-primary/40 rounded-full blur-[120px]" />
-      <motion.div animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }} className="absolute -bottom-32 -right-32 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[120px]" />
+      {/* Dark Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/100 via-black/80 to-black/70 pointer-events-none" />
 
       {/* === PATTERN OVERLAY === */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">

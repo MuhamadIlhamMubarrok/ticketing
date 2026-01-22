@@ -30,7 +30,7 @@ export default function Gallery() {
   const duplicated = [...images, ...images];
 
   return (
-    <section className="relative py-10 overflow-hidden font-body">
+    <section id="gallery" className="relative py-10 overflow-hidden font-body">
       {/* SOFT BLUR */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[520px] h-[520px] bg-primary/20 blur-[180px] rounded-full" />
 

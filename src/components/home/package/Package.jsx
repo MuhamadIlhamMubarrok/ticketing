@@ -58,7 +58,7 @@ const PackageSelection = () => {
   };
 
   return (
-    <div className="py-20 px-4 min-h-scree relative overflow-hidden">
+    <div id="packages" className="py-20 px-4 min-h-scree relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* ================= HEADER ================= */}
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className="text-center mb-16">
