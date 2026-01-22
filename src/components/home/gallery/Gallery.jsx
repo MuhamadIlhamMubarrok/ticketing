@@ -1,13 +1,30 @@
 import { motion } from "framer-motion";
-
+import gallery1 from "../../../../public/gallery/gallery-1.webp";
+import gallery2 from "../../../../public/gallery/gallery-2.webp";
+import gallery3 from "../../../../public/gallery/gallery-3.webp";
+import gallery4 from "../../../../public/gallery/gallery-4.webp";
+import gallery5 from "../../../../public/gallery/gallery-5.webp";
+import gallery6 from "../../../../public/gallery/gallery-6.webp";
+import gallery7 from "../../../../public/gallery/gallery-7.webp";
+import gallery8 from "../../../../public/gallery/gallery-8.webp";
+import gallery9 from "../../../../public/gallery/gallery-9.webp";
+import gallery10 from "../../../../public/gallery/gallery-10.webp";
+import gallery11 from "../../../../public/gallery/gallery-11.webp";
+import gallery12 from "../../../../public/gallery/gallery-12.webp";
 export default function Gallery() {
   const images = [
-    "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&q=80",
-    "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80",
-    "https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=600&q=80",
-    "https://images.unsplash.com/photo-1511446765105-385f9f63c18c?w=600&q=80",
-    "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=600&q=80",
-    "https://images.unsplash.com/photo-1516589174184-c68526614488?w=600&q=80",
+    gallery1,
+    gallery2,
+    gallery3,
+    gallery4,
+    gallery5,
+    gallery6,
+    gallery7,
+    gallery8,
+    gallery9,
+    gallery10,
+    gallery11,
+    gallery12,
   ];
 
   const duplicated = [...images, ...images];

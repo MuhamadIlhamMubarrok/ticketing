@@ -5,10 +5,11 @@ import OrderForm from "./components/formulir/Formulir";
 import Layout from "./components/home/layouts/Layouts";
 import Hero from "./components/home/hero-section/Hero";
 import About from "./components/home/about/About";
-import Tujuan from "./components/home/tujuan/tujuan";
+import Tujuan from "./components/home/tujuan/Tujuan";
 import Gallery from "./components/home/gallery/Gallery";
 import WhatsappFloating from "./components/partials/WhatsappFloating";
 import { useEffect } from "react";
+import HeroEvent from "./components/home/hero-event/HeroEvent";
 import Lenis from "@studio-freight/lenis";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
                 <Tujuan />
                 <PackageSelection />
                 <Gallery />
+                <HeroEvent />
               </Layout>
               <WhatsappFloating />
             </>
