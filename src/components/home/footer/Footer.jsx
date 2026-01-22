@@ -64,18 +64,12 @@ export default function Footer() {
 
             <h3 className="font-heading text-start text-light text-4xl leading-snug">
               Setia Bersamamu
-            
               Merawat Cinta
-              <br />
               Sampai Surga
-              <br />
-              Bersama Keluarga
             </h3>
 
             <p className="font-body text-start text-light text-sm opacity-90 max-w-md">
-              Jl. Parikesit Raya No.35, Bantarjati, Kec. Bogor Utara,
-              <br />
-              Kota Bogor, Jawa Barat 16153
+              Sharon Boulevard Timur, Bandung Regency west java, Indonesia 
             </p>
           </motion.div>
 
@@ -91,7 +85,7 @@ export default function Footer() {
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
                 transition={{ type: "spring", stiffness: 200 }}
-                href="https://wa.me/628111102011"
+                href="https://wa.me/6285320477752"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
@@ -110,7 +104,7 @@ export default function Footer() {
                 "
               >
                 <span className="text-lg">📱</span>
-                0811-1102-011 (Admin)
+                +6285320477752 (Admin)
               </motion.a>
             </div>
           </motion.div>
