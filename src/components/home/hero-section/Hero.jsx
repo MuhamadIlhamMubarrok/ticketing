@@ -1,36 +1,60 @@
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 import speaker1 from "../../../../public/general/speaker1.webp";
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 24 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="max-w-7xl mx-auto md:px-4 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <motion.div variants={container} initial="hidden" animate="show" className="max-w-7xl mx-auto md:px-4 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* LEFT CONTENT */}
         <div className="space-y-5">
           {/* Badge */}
-          <div className="flex justify-start">
-            <h1 className=" inline-flex gap-2 px-4 py-1 rounded-full border border-black text-secondary text-sm font-body">✦ Setia Event Organizer</h1>
-          </div>
+          <motion.div variants={item} className="flex justify-start">
+            <h1 className="inline-flex gap-2 px-4 py-1 rounded-full border border-black text-secondary text-sm font-body">✦ Setia Event Organizer</h1>
+          </motion.div>
 
           {/* Heading */}
-          <h1 className="font-heading text-start text-4xl sm:text-5xl lg:text-6xl leading-tight text-secondary">
+          <motion.h1 variants={item} className="font-heading text-start text-4xl sm:text-5xl lg:text-6xl leading-tight text-secondary">
             Setia Bersamamu <br />
             <span className="text-primary">Merawat Cinta</span> <br />
             <span>Sampai</span> <span className="text-primary">Surga</span>
-          </h1>
+          </motion.h1>
 
           {/* Description */}
-          <p className="font-body text-start text-base sm:text-lg text-secondary max-w-xl">
+          <motion.p variants={item} className="font-body text-start text-base sm:text-lg text-secondary max-w-xl">
             Pernikahan adalah <strong>ibadah seumur hidup</strong>. Namun seiring waktu, cinta bisa melemah oleh rutinitas, tuntutan, dan luka yang tak tersampaikan.
             <br />
             <br />
             <strong>Setia Bersamamu</strong> hadir sebagai <em>couple time</em> penuh makna, untuk menguatkan kembali ikatan, menata arah pernikahan, dan menghadirkan kembali{" "}
             <span className="text-primary font-medium">sakinah dalam rumah tangga</span>.
-          </p>
+          </motion.p>
 
           {/* CTA */}
-          <div className="flex items-center gap-6">
-            <a
+          <motion.div variants={item} className="flex items-center gap-6">
+            <motion.a
               href="#consultation"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.98 }}
               className="
                 font-body font-semibold
                 px-6 py-3 rounded-full
@@ -38,33 +62,28 @@ export default function Hero() {
                 from-[var(--color-primary-01)]
                 to-[var(--color-primary-02)]
                 text-third
-                hover:from-[var(--color-primary-02)]
-                hover:to-[var(--color-primary-01)]
                 transition-all duration-300
               "
             >
               Start Consultation
-            </a>
+            </motion.a>
 
-            <a
-              href="#explore"
-              className="text-heading bg-gradient-to-r text-secondary rounded-full font-body from-gray-200 via-gray-400 to-gray-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-gray-300 dark:focus:ring-gray-800 font-medium rounded-base text-sm  px-6 py-3 text-center leading-5"
-            >
+            <motion.a href="#explore" whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} className="bg-gradient-to-r text-secondary rounded-full font-body from-gray-200 via-gray-400 to-gray-500 font-medium text-sm px-6 py-3 shadow-sm">
               Explore more
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="relative flex justify-center lg:justify-end">
+        <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }} className="relative flex justify-center lg:justify-end">
           <div className="relative">
             {/* Blur Background */}
-            <div className="absolute inset-0 rounded-3xl bg-gold opacity-60 blur-md -z-10" />
+            <motion.div animate={{ scale: [1, 1.05, 1] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} className="absolute inset-0 rounded-3xl bg-gold opacity-60 blur-md -z-10" />
 
             <img src={speaker1} alt="Family Speaker" className="w-full max-w-md lg:max-w-lg object-contain rounded-2xl relative z-10" />
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
