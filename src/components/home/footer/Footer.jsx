@@ -1,5 +1,4 @@
 import logo1 from "../../../../public/general/logo1.png";
-// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 /* =====================
@@ -47,30 +46,34 @@ export default function Footer() {
         whileInView="visible"
         viewport={{ once: true }}
         className="
+          relative
           max-w-7xl mx-auto
           rounded-3xl
           bg-utama
           overflow-hidden
-          relative
         "
       >
-        {/* Decorative Wave */}
+        {/* Decorative Motif */}
         <div className="absolute inset-0 opacity-20 bg-motif-cover" />
 
-        <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="relative grid grid-cols-1 md:grid-cols-2 gap-8 px-8 py-10">
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/80 to-black/100 backdrop-blur-[1px] pointer-events-none" />
+
+        {/* CONTENT */}
+        <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 px-8 py-10">
           {/* LEFT */}
           <motion.div variants={fadeUp} className="space-y-4">
             <img src={logo1} alt="Setia Event" className="h-20 w-auto" />
 
             <h3 className="font-heading text-start text-light text-4xl leading-snug">
               Setia Bersamamu
+              <br />
               Merawat Cinta
+              <br />
               Sampai Surga
             </h3>
 
-            <p className="font-body text-start text-light text-sm opacity-90 max-w-md">
-              Sharon Boulevard Timur, Bandung Regency west java, Indonesia 
-            </p>
+            <p className="font-body text-start text-light text-sm opacity-90 max-w-md">Sharon Boulevard Timur, Bandung Regency, West Java, Indonesia</p>
           </motion.div>
 
           {/* RIGHT */}

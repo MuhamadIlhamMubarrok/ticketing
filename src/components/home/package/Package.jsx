@@ -83,9 +83,12 @@ const PackageSelection = () => {
               {/* Glow VIP */}
               {pkg.isPopular && <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-amber-300 rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-200" />}
 
-              <div className="relative bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 flex flex-col h-full transition-all duration-300">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 flex flex-col h-full transition-all duration-300 bg-neutral-900/60 backdrop-blur-sm">
                 {/* ===== HEADER CARD ===== */}
                 <div className={`p-8 bg-gradient-to-br ${pkg.theme} font-body text-white relative`}>
+                  {/* Dark overlay header */}
+                  <div className="absolute inset-0 bg-black/60" />
+
                   <div className="relative z-10 flex justify-between items-start">
                     <div>
                       <span className="inline-block px-3 py-1 rounded-md bg-white/20 text-[10px] font-bold uppercase tracking-wider mb-2 border border-white/10">Paket {pkg.id}</span>
@@ -107,12 +110,15 @@ const PackageSelection = () => {
                 </div>
 
                 {/* ===== BODY CARD ===== */}
-                <div className="p-8 flex-1 flex flex-col font-body bg-white">
-                  <ul className="space-y-4 mb-8 flex-1">
+                <div className="relative p-8 flex-1 flex flex-col font-body bg-neutral-900/40">
+                  {/* Body overlay */}
+                  <div className="absolute inset-0 bg-black/25 pointer-events-none" />
+
+                  <ul className="relative z-10 space-y-4 mb-8 flex-1">
                     {pkg.features.map((feat, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-600 text-sm font-medium leading-relaxed">{feat}</span>
+                        <CheckCircle className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-200 text-sm font-medium leading-relaxed">{feat}</span>
                       </li>
                     ))}
                   </ul>
@@ -121,7 +127,7 @@ const PackageSelection = () => {
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
                     onClick={() => handleSelect(pkg)}
-                    className={`font-body w-full py-4 rounded-xl font-bold text-sm uppercase tracking-wide shadow-md transition-all duration-300 ${pkg.buttonColor}`}
+                    className={`relative z-10 font-body w-full py-4 rounded-xl font-bold text-sm uppercase tracking-wide shadow-lg transition-all duration-300 ${pkg.buttonColor}`}
                   >
                     Pilih Paket Ini
                   </motion.button>
