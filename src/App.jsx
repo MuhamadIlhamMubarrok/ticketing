@@ -9,7 +9,7 @@ import Tujuan from "./components/home/tujuan/Tujuan";
 import Gallery from "./components/home/gallery/Gallery";
 import WhatsappFloating from "./components/partials/WhatsappFloating";
 import { useEffect } from "react";
-import HeroEvent from "./components/home/hero-event/HeroEvent";
+import HeroEvent from "./components/home/hero-section/HeroEvent";
 import Lenis from "@studio-freight/lenis";
 
 function App() {
