@@ -3,7 +3,7 @@ import { Calendar, MapPin, Sparkles, ArrowRight } from 'lucide-react';
 import bannerImage from '../../../../public/banner/banner-setia.webp'; // GANTI dengan path yang sesuai
 const HeroEvent = () => {
   return (
-    <div className="py-12 px-4 max-w-7xl mx-auto font-sans">
+    <div className="py-12  max-w-7xl mx-auto font-sans">
       
       {/* Container Utama (Card Putih Besar) */}
       <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
@@ -21,7 +21,7 @@ const HeroEvent = () => {
 
           {/* Judul Utama */}
           <div className="space-y-2">
-            <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
+            <h1 className="text-4xl lg:text-5xl font-extrabold font-heading text-gray-900 leading-tight">
               Setia <span className="text-amber-500">Bersamamu</span>
             </h1>
             <p className="text-xl text-gray-500 font-serif italic">

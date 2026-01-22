@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+// Pastikan path import gambarmu benar
 import speaker1 from "../../../../public/general/speaker1.webp";
 
 const container = {
@@ -25,7 +26,7 @@ const item = {
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <motion.div variants={container} initial="hidden" animate="show" className="max-w-7xl mx-auto md:px-4 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <motion.div variants={container} initial="hidden" animate="show" className="max-w-7xl mx-auto md:px-4 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-4">
         {/* LEFT CONTENT */}
         <div className="space-y-5">
           {/* Badge */}
@@ -49,12 +50,19 @@ export default function Hero() {
             <span className="text-primary font-medium">sakinah dalam rumah tangga</span>.
           </motion.p>
 
-          {/* CTA */}
-          <motion.div variants={item} className="flex items-center gap-6">
+          {/* CTA SECTION - DIMODIFIKASI DI SINI */}
+          <motion.div 
+            variants={item} 
+            // 1. flex-col (Mobile: Kolom), sm:flex-row (Tablet ke atas: Baris)
+            // 2. gap-4 (Mobile: Jarak rapat), sm:gap-6 (PC: Jarak renggang)
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6 w-full sm:w-auto"
+          >
             <motion.a
               href="#consultation"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
+              // 3. w-full (Mobile: Full width), sm:w-auto (PC: Auto width)
+              // 4. flex justify-center (Agar teks di tengah saat full width)
               className="
                 font-body font-semibold
                 px-6 py-3 rounded-full
@@ -63,12 +71,24 @@ export default function Hero() {
                 to-[var(--color-primary-02)]
                 text-third
                 transition-all duration-300
+                w-full sm:w-auto flex justify-center text-center
               "
             >
               Start Consultation
             </motion.a>
 
-            <motion.a href="#explore" whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} className="bg-gradient-to-r text-secondary rounded-full font-body from-gray-200 via-gray-400 to-gray-500 font-medium text-sm px-6 py-3 shadow-sm">
+            <motion.a 
+              href="#explore" 
+              whileHover={{ y: -2 }} 
+              whileTap={{ scale: 0.98 }} 
+              // Tambahkan class yang sama: w-full sm:w-auto flex justify-center
+              className="
+                bg-gradient-to-r text-secondary rounded-full font-body 
+                from-gray-200 via-gray-400 to-gray-500 font-medium 
+                text-sm px-6 py-3 shadow-sm
+                w-full sm:w-auto flex justify-center text-center
+              "
+            >
               Explore more
             </motion.a>
           </motion.div>
