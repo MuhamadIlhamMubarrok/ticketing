@@ -63,7 +63,12 @@ export default function Footer() {
             <img src={logo1} alt="Setia Event" className="h-20 w-auto" />
 
             <h3 className="font-heading text-start text-light text-4xl leading-snug">
-              Menggapai Surga <br />
+              Setia Bersamamu
+            
+              Merawat Cinta
+              <br />
+              Sampai Surga
+              <br />
               Bersama Keluarga
             </h3>
 
