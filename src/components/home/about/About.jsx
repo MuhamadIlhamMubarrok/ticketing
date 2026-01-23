@@ -59,23 +59,25 @@ export default function About() {
             Cuplikan suasana & pesan utama Event <span className="text-primary">Setia Bersamamu</span>
           </p>
           <div>
-            <span className="inline-block mb-4 px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-widest uppercase bg-primary/10 border border-primary/30 text-primary">✦ Tentang Event</span>
+            <div className="flex justify-center">
+              <span className="inline-block mb-4 px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-widest uppercase bg-primary/10 border border-primary/30 text-primary">✦ Tentang Event</span>
+            </div>
 
-            <h1 className="font-heading text-3xl md:text-5xl font-bold leading-tight">
+            <h1 className="text-center font-heading text-3xl md:text-5xl font-bold leading-tight">
               Setia Bersamamu <br />
               <span className="text-primary">Merawat Cinta Sampai Surga</span>
             </h1>
 
-            <p className="mt-3 text-sm md:text-base text-third/80">
+            <p className="text-center mt-3 text-sm md:text-base text-third/80">
               Seminar Eksklusif Pasutri <span className="text-primary font-semibold">Spesial Hadir di Kota Bandung</span>
             </p>
           </div>
 
-          <motion.p variants={item} className="text-third/80 text-base md:text-lg leading-relaxed">
+          <motion.p variants={item} className="text-center text-third/80 text-base md:text-lg leading-relaxed">
             Pernikahan adalah <span className="text-primary font-medium">ibadah seumur hidup</span>. Namun dalam perjalanannya, tak jarang cinta diuji oleh kebosanan, tuntutan hidup, dan kurangnya ruang untuk saling memahami.
           </motion.p>
 
-          <motion.p variants={item} className="text-third/80 leading-relaxed">
+          <motion.p variants={item} className="text-center text-third/80 leading-relaxed">
             <span className="font-semibold text-light">Setia Bersamamu</span> hadir sebagai ruang
             <span className="italic text-primary"> couple time</span> yang menenangkan, mengisi kembali energi cinta, meluruskan arah pernikahan, dan menghadirkan kembali
             <span className="italic text-primary"> kesakinahan</span> dalam rumah tangga.
@@ -93,7 +95,7 @@ export default function About() {
         </motion.div>
 
         {/* BOTTOM DESCRIPTION */}
-        <motion.div variants={item} className="mt-12 pt-8 border-t border-white/40 space-y-5 text-third/80 text-sm md:text-base leading-relaxed">
+        <motion.div variants={item} className="mt-12 text-center pt-8 border-t border-white/40 space-y-5 text-third/80 text-sm md:text-base leading-relaxed">
           <p>Event ini ditujukan bagi Anda yang ingin memperkuat ikatan cinta, sedang menghadapi ujian rumah tangga, maupun yang ingin mempersiapkan pernikahan dengan ilmu yang benar.</p>
 
           <p>
